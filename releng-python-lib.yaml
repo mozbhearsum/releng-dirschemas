@@ -4,10 +4,10 @@ allow_extra_dirs: true
 files:
   MANIFEST.in:
     contains:
-    - include pyproject.toml
-    - include setup.py
-    - recursive-include src *
-    - recursive-include tests *
+      - include pyproject.toml
+      - include setup.py
+      - recursive-include src *
+      - recursive-include tests *
   pyproject.toml:
     contains:
     - tool.black
@@ -15,9 +15,9 @@ files:
   setup.py: {}
   tox.ini:
     contains:
-    - "[testenv:docker]"
-    - "[testenv]"
-    - "[testenv:check]"
+      - "[testenv:docker]"
+      - "[testenv]"
+      - "[testenv:check]"
 dirs:
   requirements:
     absent: true
