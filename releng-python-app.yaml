@@ -2,12 +2,13 @@
 allow_extra_files: true
 allow_extra_dirs: true
 files:
+  HISTORY.rst: {}
   MANIFEST.in:
     contains:
       - include pyproject.toml
       - include setup.py
       - recursive-include src *
-      - recursive-include tests *
+      - recursive-exclude tests *
   docker-compose.yml: {}
   Dockerfile:
     contains:

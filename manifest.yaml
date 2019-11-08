@@ -51,6 +51,7 @@ apps:
 tools:
   schema: releng-python-tool.yaml
   projects:
+    - https://github.com/mozilla/balrog/tree/master/agent
     - https://github.com/mozilla-releng/dirschema
     - https://github.com/mozilla-releng/mozapkpublisher
     - https://github.com/mozilla-releng/scriptworker
@@ -58,5 +59,6 @@ tools:
 libs:
   schema: releng-python-lib.yaml
   projects:
+    - https://github.com/mozilla/balrog/tree/master/client
     - https://github.com/mozilla-releng/redo
     - https://github.com/mozilla-releng/taskhuddler
