@@ -9,7 +9,6 @@ files:
       - include setup.py
       - recursive-include src *
       - recursive-exclude tests *
-  docker-compose.yml: {}
   Dockerfile:
     contains:
       - "FROM python:3"

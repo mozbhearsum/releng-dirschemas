@@ -1,0 +1,5 @@
+---
+allow_extra_files: true
+allow_extra_dirs: true
+files:
+  docker-compose.yml: {}
