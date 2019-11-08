@@ -1,0 +1,62 @@
+repos:
+  schema: releng-repo.yaml
+  projects:
+    - https://github.com/mozilla/balrog
+    - https://github.com/mozilla-releng/dirschema
+    - https://github.com/mozilla-releng/k8s-autoscale
+    - https://github.com/mozilla-releng/mapper
+    - https://github.com/mozilla-releng/mozapkpublisher
+    - https://github.com/mozilla-releng/redo
+    - https://github.com/mozilla-releng/scriptworker
+    - https://github.com/mozilla-releng/scriptworker-scripts
+    - https://github.com/mozilla-releng/shipit
+    - https://github.com/mozilla-releng/tooltool
+    - https://github.com/mozilla-releng/treestatus
+    - https://github.com/mozilla-releng/winsign
+pyup:
+  schema: pyup.yaml
+  projects:
+    - https://github.com/mozilla/balrog
+    - https://github.com/mozilla-releng/buildhub2
+    - https://github.com/mozilla-releng/dirschema
+    - https://github.com/mozilla-releng/k8s-autoscale
+    - https://github.com/mozilla-releng/mapper
+    - https://github.com/mozilla-releng/mozapkpublisher
+    - https://github.com/mozilla-releng/scriptworker
+    - https://github.com/mozilla-releng/scriptworker-scripts
+    - https://github.com/mozilla-releng/shipit
+    - https://github.com/mozilla-releng/tooltool
+    - https://github.com/mozilla-releng/treestatus
+    - https://github.com/mozilla-releng/winsign
+apps:
+  schema: releng-python-app.yaml
+  projects:
+    - https://github.com/mozilla/balrog
+    - https://github.com/mozilla-releng/buildhub2
+    - https://github.com/mozilla-releng/k8s-autoscale
+    - https://github.com/mozilla-releng/mapper
+    - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/addonscript
+    - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/balrogscript
+    - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/beetmoverscript
+    - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/bouncerscript
+    - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/iscript
+    - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/pushapkscript
+    - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/pushsnapscript
+    - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/shipitscript
+    - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/signingscript
+    - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/treescript
+    - https://github.com/mozilla-releng/shipit/tree/master/api
+    - https://github.com/mozilla-releng/tooltool/tree/master/api
+    - https://github.com/mozilla-releng/treestatus/tree/master/api
+tools:
+  schema: releng-python-tool.yaml
+  projects:
+    - https://github.com/mozilla-releng/dirschema
+    - https://github.com/mozilla-releng/mozapkpublisher
+    - https://github.com/mozilla-releng/scriptworker
+    - https://github.com/mozilla-releng/winsign
+libs:
+  schema: releng-python-lib.yaml
+  projects:
+    - https://github.com/mozilla-releng/redo
+    - https://github.com/mozilla-releng/taskhuddler

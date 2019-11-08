@@ -1,0 +1,9 @@
+---
+allow_extra_files: true
+allow_extra_dirs: true
+files:
+  ".pyup.yml":
+    contains:
+    - "update: all"
+    - "pin: True"
+

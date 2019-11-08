@@ -1,0 +1,7 @@
+allow_extra_files: true
+allow_extra_dirs: true
+files:
+  CODE_OF_CONDUCT.md: {}
+  HISTORY.rst: {}
+  README.rst: {}
+  .taskcluster.yml: {}

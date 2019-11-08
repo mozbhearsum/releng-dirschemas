@@ -1,0 +1,29 @@
+---
+allow_extra_files: true
+allow_extra_dirs: true
+files:
+  MANIFEST.in:
+    contains:
+    - include pyproject.toml
+    - include setup.py
+    - recursive-include src *
+    - recursive-include tests *
+  pyproject.toml:
+    contains:
+    - tool.black
+    - tool.isort
+  setup.py: {}
+  tox.ini:
+    contains:
+    - "[testenv:docker]"
+    - "[testenv]"
+    - "[testenv:check]"
+dirs:
+  requirements:
+    absent: true
+  src:
+    allow_extra_files: false
+    allow_extra_dirs: true
+  tests:
+    allow_extra_files: true
+    allow_extra_dirs: true
