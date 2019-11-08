@@ -1,5 +1,5 @@
 repos:
-  schema: releng-repo.yaml
+  schema: repo.yaml
   projects:
     - https://github.com/mozilla/balrog
     - https://github.com/mozilla-releng/dirschema
@@ -48,7 +48,7 @@ docker-compose:
     - https://github.com/mozilla-releng/tooltool
     - https://github.com/mozilla-releng/treestatus
 apps:
-  schema: releng-python-app.yaml
+  schema: python-app.yaml
   projects:
     - https://github.com/mozilla/balrog
     - https://github.com/mozilla-releng/buildhub2
@@ -67,7 +67,7 @@ apps:
     - https://github.com/mozilla-releng/tooltool/tree/master/api
     - https://github.com/mozilla-releng/treestatus/tree/master/api
 tools:
-  schema: releng-python-tool.yaml
+  schema: python-tool.yaml
   projects:
     - https://github.com/mozilla/balrog/tree/master/agent
     - https://github.com/mozilla-releng/dirschema
@@ -76,7 +76,7 @@ tools:
     - https://github.com/mozilla-releng/scriptworker
     - https://github.com/mozilla-releng/winsign
 libs:
-  schema: releng-python-lib.yaml
+  schema: python-lib.yaml
   projects:
     - https://github.com/mozilla/balrog/tree/master/client
     - https://github.com/mozilla-releng/redo
