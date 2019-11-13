@@ -21,7 +21,7 @@ files:
       - "[testenv:check]"
 dirs:
   requirements:
-    allow_extra_files: false
+    allow_extra_files: true
     allow_extra_dirs: false
     files:
       base.in: {}
