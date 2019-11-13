@@ -4,7 +4,6 @@ repos:
     - https://github.com/mozilla/balrog
     - https://github.com/mozilla-releng/dirschema
     - https://github.com/mozilla-releng/k8s-autoscale
-    - https://github.com/mozilla-releng/mapper
     - https://github.com/mozilla-releng/mozapkpublisher
     - https://github.com/mozilla-releng/redo
     - https://github.com/mozilla-releng/scriptworker
@@ -20,7 +19,6 @@ pyup:
     - https://github.com/mozilla-releng/buildhub2
     - https://github.com/mozilla-releng/dirschema
     - https://github.com/mozilla-releng/k8s-autoscale
-    - https://github.com/mozilla-releng/mapper
     - https://github.com/mozilla-releng/mozapkpublisher
     - https://github.com/mozilla-releng/scriptworker
     - https://github.com/mozilla-releng/scriptworker-scripts
@@ -33,7 +31,6 @@ docker-compose:
   projects:
     - https://github.com/mozilla/balrog
     - https://github.com/mozilla-releng/buildhub2
-    - https://github.com/mozilla-releng/mapper
     - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/addonscript
     - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/balrogscript
     - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/beetmoverscript
@@ -52,7 +49,6 @@ apps:
   projects:
     - https://github.com/mozilla/balrog
     - https://github.com/mozilla-releng/buildhub2
-    - https://github.com/mozilla-releng/mapper
     - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/addonscript
     - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/balrogscript
     - https://github.com/mozilla-releng/scriptworker-scripts/tree/master/beetmoverscript
