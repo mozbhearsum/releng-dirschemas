@@ -1,3 +1,4 @@
+# For use with Python libraries
 ---
 allow_extra_files: true
 allow_extra_dirs: true
@@ -8,23 +9,31 @@ files:
       - include pyproject.toml
       - include setup.py
       - recursive-include src *
+      # Tests should be included in distributions!
       - recursive-exclude tests *
+  # We're not enforcing specifics for black & isort, but they should be configured
   pyproject.toml:
     contains:
     - tool.black
     - tool.isort
   setup.py: {}
+  # Make sure that tox is set up to do tests in Docker
   tox.ini:
     contains:
       - "[testenv:docker]"
       - "[testenv]"
       - "[testenv:check]"
 dirs:
+  # Libraries should _not_ be using pip-compile-multi style requirements
+  # because they shouldn't be pinning dependencies at all!
   requirements:
     absent: true
+  # Code in src helps avoids implicitly depending on a project's module being present in
+  # the current working directory.
   src:
     allow_extra_files: false
     allow_extra_dirs: true
+  # Tests should NOT be in the source!
   tests:
     allow_extra_files: true
     allow_extra_dirs: true

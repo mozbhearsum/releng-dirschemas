@@ -1,3 +1,7 @@
+# Stuff that should exist in the root of any repository.
+# Note that some things that seem like they should exist here (like HISTORY.rst or docker-compose.yml)
+# don't, because monorepos like scriptworker-scripts have them in subdirectories.
+# Other things, such as .pyup.yml, don't exist here because not all projects use Pyup
 allow_extra_files: true
 allow_extra_dirs: true
 files:

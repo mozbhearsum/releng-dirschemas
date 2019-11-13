@@ -1,3 +1,4 @@
+# For use with Python projects that use pyup. Generally, any Python application or tool should be.
 ---
 allow_extra_files: true
 allow_extra_dirs: true

@@ -1,3 +1,4 @@
+# For use with Python applications that are deployed with Docker images
 ---
 allow_extra_files: true
 allow_extra_dirs: true
@@ -8,25 +9,34 @@ files:
       - include pyproject.toml
       - include setup.py
       - recursive-include src *
+      # Tests should be included in distributions!
       - recursive-exclude tests *
+  # They should use Python 3! We can't check for a specific version because applications
+  # may upgrade to newer minor versions at different times.
   Dockerfile:
     contains:
       - "FROM python:3"
+  # Test images should be parametrized to make it easy to test against multiple Python versions.
   Dockerfile.test:
     contains:
-      - "FROM python:"
+      - "FROM python:${PYTHON_VERSION}"
+  # We're not enforcing specifics for black & isort, but they should be configured
   pyproject.toml:
     contains:
     - tool.black
     - tool.isort
   setup.py: {}
+  # Make sure that tox is set up to do tests in Docker
   tox.ini:
     contains:
       - "[testenv:docker]"
       - "[testenv]"
       - "[testenv:check]"
 dirs:
+  # Make sure the project is using pip-compile-multi style requirements
   requirements:
+    # Extra requirements files are OK, some projects use them for extra
+    # test targets.
     allow_extra_files: true
     allow_extra_dirs: false
     files:
@@ -45,9 +55,12 @@ dirs:
         contains:
           - tox
       local.txt: {}
+  # Code in src helps avoids implicitly depending on a project's module being present in
+  # the current working directory.
   src:
     allow_extra_files: false
     allow_extra_dirs: true
+  # Tests should NOT be in the source!
   tests:
     allow_extra_files: true
     allow_extra_dirs: true

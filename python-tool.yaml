@@ -1,3 +1,5 @@
+# For use with Python tools. These are similar to applications, but are generally not deployed
+# with Docker images; they usually just contain command line tools.
 ---
 allow_extra_files: true
 allow_extra_dirs: true
@@ -8,19 +10,25 @@ files:
       - include pyproject.toml
       - include setup.py
       - recursive-include src *
+      # Tests should be included in distributions!
       - recursive-exclude tests *
+  # We're not enforcing specifics for black & isort, but they should be configured
   pyproject.toml:
     contains:
       - tool.black
       - tool.isort
   setup.py: {}
+  # Make sure that tox is set up to do tests in Docker
   tox.ini:
     contains:
       - "[testenv:docker]"
       - "[testenv]"
       - "[testenv:check]"
 dirs:
+  # Make sure the project is using pip-compile-multi style requirements
   requirements:
+    # Extra requirements files are OK, some projects use them for extra
+    # test targets.
     allow_extra_files: true
     allow_extra_dirs: false
     files:
@@ -39,9 +47,12 @@ dirs:
         contains:
           - tox
       local.txt: {}
+  # Code in src helps avoids implicitly depending on a project's module being present in
+  # the current working directory.
   src:
     allow_extra_files: false
     allow_extra_dirs: true
+  # Tests should NOT be in the source!
   tests:
     allow_extra_files: true
     allow_extra_dirs: true
