@@ -4,7 +4,6 @@ repos:
     - https://github.com/mozilla/balrog
     - https://github.com/mozilla-releng/dirschema
     - https://github.com/mozilla-releng/k8s-autoscale
-    - https://github.com/mozilla-releng/mozapkpublisher
     - https://github.com/mozilla-releng/redo
     - https://github.com/mozilla-releng/scriptworker
     - https://github.com/mozilla-releng/scriptworker-scripts
@@ -12,6 +11,7 @@ repos:
     - https://github.com/mozilla-releng/tooltool
     - https://github.com/mozilla-releng/treestatus
     - https://github.com/mozilla-releng/winsign
+    - https://github.com/catlee/releng-pypackage
 pyup:
   schema: pyup.yaml
   projects:
@@ -19,13 +19,10 @@ pyup:
     - https://github.com/mozilla-releng/buildhub2
     - https://github.com/mozilla-releng/dirschema
     - https://github.com/mozilla-releng/k8s-autoscale
-    - https://github.com/mozilla-releng/mozapkpublisher
-    - https://github.com/mozilla-releng/scriptworker
     - https://github.com/mozilla-releng/scriptworker-scripts
     - https://github.com/mozilla-releng/shipit
     - https://github.com/mozilla-releng/tooltool
     - https://github.com/mozilla-releng/treestatus
-    - https://github.com/mozilla-releng/winsign
 docker-compose:
   schema: docker-compose.yaml
   projects:
@@ -68,12 +65,11 @@ tools:
     - https://github.com/mozilla/balrog/tree/master/agent
     - https://github.com/mozilla-releng/dirschema
     - https://github.com/mozilla-releng/k8s-autoscale
-    - https://github.com/mozilla-releng/mozapkpublisher
-    - https://github.com/mozilla-releng/scriptworker
-    - https://github.com/mozilla-releng/winsign
 libs:
   schema: python-lib.yaml
   projects:
     - https://github.com/mozilla/balrog/tree/master/client
     - https://github.com/mozilla-releng/redo
     - https://github.com/mozilla-releng/taskhuddler
+    - https://github.com/mozilla-releng/scriptworker
+    - https://github.com/mozilla-releng/winsign
